@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramTaskBot", "TelegramTaskBot.csproj", "{2466E990-575E-438F-9C77-A8239D332462}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_TelegramTaskBot", "CA_TelegramTaskBot\CA_TelegramTaskBot.csproj", "{A4756CB5-E471-4F08-952B-D55ACD73C233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2466E990-575E-438F-9C77-A8239D332462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2466E990-575E-438F-9C77-A8239D332462}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2466E990-575E-438F-9C77-A8239D332462}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2466E990-575E-438F-9C77-A8239D332462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4756CB5-E471-4F08-952B-D55ACD73C233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4756CB5-E471-4F08-952B-D55ACD73C233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4756CB5-E471-4F08-952B-D55ACD73C233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4756CB5-E471-4F08-952B-D55ACD73C233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A47EBAD0-A78B-4110-8395-2ACB6FDB2AD7}
+		SolutionGuid = {6AED2D75-C21B-4B60-A161-04835F4D9359}
 	EndGlobalSection
 EndGlobal
