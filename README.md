@@ -1,157 +1,102 @@
-# 📊 Telegram Task Bot
+# 📊 Telegram Task Bot (Legacy)
 
-A Telegram bot that converts task messages into Excel spreadsheets automatically.
+A Telegram bot that converts simple task messages into Excel spreadsheets automatically.
+
+---
+
+## 🚧 Project Evolution 
+
+This repository contains **two major versions** of the Telegram Task Bot:
+
+- **`main` branch (this branch)** → **Legacy version**
+  - Simple English message format
+  - Flat task parsing
+  - Basic Excel generation
+
+- **`v2/architecture-redesign` branch** → **Enhanced & recommended version 🌙**
+  - Structured Arabic Ramadan tracking cards
+  - Domain-driven design (Coordinator, Participant, DailyReport)
+  - One row per participant per day
+  - One column per task
+  - Duplicate detection (day + participant)
+  - Improved validation and reporting
+
+👉 **For the latest implementation, please switch to the `v2/architecture-redesign` branch.**
+
+---
+
+## ✨ Features (Legacy)
+
+-  Parse simple task messages
+-  Generate Excel spreadsheets
+-  Multiple people per report
+-  Automatic total calculation
+-  Token management via `.env`
+
+---
+
+## 📖 Message Format
+
+person name: Ali
+
+frontend: 10
+
+backend: 5
 
 
-## ✨ Features
+person name: Amine
 
-- 📝 Parse task messages in natural format
-- 📊 Generate professional Excel spreadsheets
-- 👥 Support multiple people and tasks
-- 🔢 Automatic totals calculation
-- 💎 Beautiful formatting and styling
-- 🔒 Secure token management with .env
+frontend: 8
+
+backend: 7
+
+
+---
+
+## 📊 Output
+
+- One row per person
+- Tasks as columns
+- Automatic totals
+- Basic Excel formatting
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- Telegram bot token from [@BotFather](https://t.me/BotFather)
 
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download)
-- A Telegram account
-- Visual Studio 2022 or VS Code (optional)
+### Run
 
-### Installation
+```bash
+git clone https://github.com/RoaaAlsham/telegram-task-bot.git
+cd telegram-task-bot
+cp .env.example .env
+dotnet restore
+dotnet run
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/RoaaAlsham/telegram-task-bot.git
-   cd telegram-task-bot
-   ```
-
-2. **Create a Telegram Bot**
-   - Open Telegram and search for [@BotFather](https://t.me/BotFather)
-   - Send `/newbot` and follow the instructions
-   - Copy your bot token
-
-3. **Configure environment**
-   ```bash
-   # Copy the example env file
-   cp .env.example .env
-   
-   # Edit .env and add your bot token
-   # TELEGRAM_BOT_TOKEN=your_token_here
-   ```
-
-4. **Install dependencies**
-   ```bash
-   dotnet restore
-   ```
-
-5. **Run the bot**
-   ```bash
-   dotnet run
-   ```
-
-## 📖 Usage
-
-1. **Start a conversation** with your bot on Telegram
-2. **Send** `/start` to see instructions
-3. **Send task messages** in this format:
-   ```
-   person name: Ahmet 
-   coding: 8
-   testing: 2
-   documentation: 3
-
-   person name: Ayşe 
-   coding: 5
-   testing: 4
-   documentation: 6
-   ```
-4. **Use** `/generate` to create your Excel file
-5. **Download** the generated spreadsheet!
-
-### Available Commands
-
-| Command | Description |
-|---------|-------------|
-| `/start` | Welcome message and instructions |
-| `/help` | Show all available commands |
-| `/preview` | Preview stored messages |
-| `/generate` | Create Excel file |
-| `/clear` | Clear all stored messages |
-
-## 📸 Example
-
-**Input Messages:**
-```
-person name: Ali
-frontend: 10
-backend: 5
-
-person name: Amine
-frontend: 8
-backend: 7
-```
-
-**Output:** Excel spreadsheet with:
-- Persons as rows
-- Tasks as columns
-- Automatic total calculations
-- Formatting
-
-## 🛠️ Technology Stack
-
-- **[Telegram.Bot](https://github.com/TelegramBots/Telegram.Bot)** - Telegram Bot API wrapper
-- **[EPPlus](https://github.com/EPPlusSoftware/EPPlus)** - Excel file generation
-- **[DotNetEnv](https://github.com/tonerdo/dotnet-env)** - Environment variable management
-- **.NET 8.0** - Runtime framework
-
-## 📁 Project Structure
-
-```
+🧱 Project Structure
 TelegramTaskBot/
-├── Program.cs              # Entry point
-├── TaskBot.cs             # Bot logic and handlers
-├── TaskData.cs            # Data model
-├── MessageParser.cs       # Message parsing
-├── ExcelGenerator.cs      # Excel generation
-├── .env.example           # Environment template
-├── .gitignore            # Git ignore rules
-└── README.md             # This file
-```
+├── Program.cs
+├── TaskBot.cs
+├── TaskData.cs
+├── MessageParser.cs
+├── ExcelGenerator.cs
+└── README.md
 
-## 🔒 Security
+🛠 Tech Stack
 
-- Never commit your `.env` file
-- Keep your bot token secret
-- The `.gitignore` file protects sensitive data
-- Use environment variables for production
+Telegram.Bot
 
-## 🚢 Deployment
+EPPlus
 
-### Docker (Recommended)
+DotNetEnv
 
-```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
-COPY . .
-RUN dotnet publish -c Release -o out
+.NET 8
 
-FROM mcr.microsoft.com/dotnet/runtime:8.0
-WORKDIR /app
-COPY --from=build /app/out .
-ENV TELEGRAM_BOT_TOKEN=""
-ENTRYPOINT ["dotnet", "TelegramTaskBot.dll"]
-```
 
-## 🤝 Contributing
+📝 Note
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
+This branch is kept for historical and learning purposes.
