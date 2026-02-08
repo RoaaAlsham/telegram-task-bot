@@ -1,6 +1,6 @@
-# Ramadan Task Tracking Bot 🌙
+# Task Tracking Bot 
 
-A Telegram bot that receives daily Ramadan task reports as Arabic text messages and converts them into structured Excel files (.xlsx).
+A Telegram bot that receives daily tasks reports as Arabic text messages and converts them into structured Excel files (.xlsx).
 
 ## Features
 
@@ -70,7 +70,7 @@ Each row represents one participant on one day:
 ```
 TelegramTaskBot/
 ├── Models/
-│   ├── RamadanTask.cs       # Single task: name + validated score (0–10)
+│   ├── DailyTask.cs       # Single task: name + validated score (0–10)
 │   ├── Participant.cs       # Person: ID, name, coordinator link
 │   ├── Coordinator.cs       # Supervisor: ID, name, participants list
 │   └── DailyReport.cs       # One parsed message = one Excel row
@@ -94,7 +94,7 @@ DailyReport (one per message)
      ├── Day
      ├── Participant
      ├── Coordinator
-     └── Tasks[] ──> RamadanTask { Name, Value }
+     └── Tasks[] ──> DailyTask { Name, Value }
 ```
 
 ## Setup
