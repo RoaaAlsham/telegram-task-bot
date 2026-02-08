@@ -134,7 +134,7 @@ DailyReport (one per message)
 ## Task Validation Rules
 
 - Task values must be between **0** and **10** (values outside this range are clamped)
-- If a task line has no value (e.g., `صلاة الضحى:`), it defaults to **0**
+- If a task line has no value it defaults to **0**
 - Emojis and decorative characters are stripped before parsing
 - Extra spaces and line breaks are handled gracefully
 - Messages missing required fields (day, participant name/ID, coordinator ID) are rejected
